@@ -7,6 +7,8 @@
 	<artifactId>spring-boot-mockito</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+	
+	<!-- Demo -->
 
 	<name>spring-boot-mockito</name>
 	<description>spring boot jdbc Template</description>
