@@ -10,6 +10,8 @@
 
 	<name>spring-boot-mockito</name>
 	<description>spring boot jdbc Template</description>
+	
+	<!-- Demo -->
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
