@@ -13,17 +13,21 @@
 	<name>spring-boot-mockito</name>
 	<description>spring boot jdbc Template</description>
 	
+	
+	
 	<distributionManagement>
 	<snapshotRepository>
-	      <id>deploymentRepo</id>
-	      <url>http://54.224.52.38:8081/repository/hcltraining/</url>
+	      <id>nexus</id>
+	      <url>http://3.86.69.50:8081/repository/hcltraining/</url>
 	</snapshotRepository>
 	<repository>
-	      <id>nexusdeploymentrepo</id>
-              <url>http://54.224.52.38:8081/repository/hcltraining/</url>
+	      <id>nexus</id>
+              <url>http://3.86.69.50:8081/repository/hcltraining/</url>
 	</repository>
         </distributionManagement>
-
+     
+	
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
