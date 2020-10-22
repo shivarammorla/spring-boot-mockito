@@ -11,8 +11,16 @@
 	<name>spring-boot-mockito</name>
 	<description>spring boot jdbc Template</description>
 	
-	<!-- Demo -->
-	<!-- Demo1 -->
+	<distributionManagement>
+	<snapshotRepository>
+	      <id>deploymentRepo</id>
+	      <url>http://54.224.52.38:8081/repository/hcltraining/</url>
+	</snapshotRepository>
+	<repository>
+	      <id>nexusdeploymentrepo</id>
+              <url>http://54.224.52.38:8081/repository/hcltraining/</url>
+	</repository>
+        </distributionManagement>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
