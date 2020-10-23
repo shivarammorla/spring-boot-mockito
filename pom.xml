@@ -13,15 +13,10 @@
 	
 	
 	<distributionManagement>
-	<snapshotRepository>
-	      <id>Testrelease</id>
-	      <url>http://34.201.154.157:8081/hcltraining/</url>
-	</snapshotRepository>
-<!--	<repository>
-	      <id>Testrelease</id>
-              <url>http://34.201.154.157:8081/repository/hcltraining/</url>
-	</repository>       -->
-		
+	<repository>
+	      <id>deploymentRepo</id>
+	      <url>http://34.201.154.157:8081/repository/hcltraining/</url>
+	</repository>
         </distributionManagement>
     
 	
