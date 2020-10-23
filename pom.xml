@@ -18,11 +18,11 @@
 	<distributionManagement>
 	<snapshotRepository>
 	      <id>nexus</id>
-	      <url>http://3.86.69.50:8081/repository/hcltraining/</url>
+	      <url>http://34.201.154.157:8081/hcltraining/</url>
 	</snapshotRepository>
 	<repository>
 	      <id>nexus</id>
-              <url>http://3.86.69.50:8081/repository/hcltraining/</url>
+              <url>http://34.201.154.157:8081/repository/hcltraining/</url>
 	</repository>
         </distributionManagement>
      
