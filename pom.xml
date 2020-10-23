@@ -11,18 +11,19 @@
 	<description>spring boot jdbc Template</description>
 	
 	
-	<!--
+	
 	<distributionManagement>
 	<snapshotRepository>
 	      <id>Testrelease</id>
 	      <url>http://34.201.154.157:8081/hcltraining/</url>
 	</snapshotRepository>
-	<repository>
+<!--	<repository>
 	      <id>Testrelease</id>
               <url>http://34.201.154.157:8081/repository/hcltraining/</url>
-	</repository>
+	</repository>       -->
+		
         </distributionManagement>
-        -->
+    
 	
 	
 	<parent>
