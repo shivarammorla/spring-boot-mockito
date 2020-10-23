@@ -10,8 +10,6 @@
 	<name>spring-boot-mockito</name>
 	<description>spring boot jdbc Template</description>
 	
-	<!-- Demo -->
-	
 	
 	<!--
 	<distributionManagement>
