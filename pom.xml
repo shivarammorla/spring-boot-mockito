@@ -12,6 +12,8 @@
 	
 	<!-- Demo -->
 	
+	
+	<!--
 	<distributionManagement>
 	<snapshotRepository>
 	      <id>Testrelease</id>
@@ -22,7 +24,7 @@
               <url>http://34.201.154.157:8081/repository/hcltraining/</url>
 	</repository>
         </distributionManagement>
-     
+        -->
 	
 	
 	<parent>
