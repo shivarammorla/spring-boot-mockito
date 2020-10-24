@@ -11,9 +11,6 @@
 	<description>spring boot jdbc Template</description>
 	
 	
-	<!-- Demo -->
-	
-	
 	<distributionManagement>
 	<repository>
 	      <id>deploymentRepo</id>
