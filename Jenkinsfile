@@ -34,7 +34,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                sshagent(['Tomcat-credentials']) {
              
                //sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/target/spring-boot-mockito-0.0.1.war ubuntu@172.31.10.15:/var/lib/tomcat9/webapps"
-               sh "ssh -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/target/spring-boot-mockito-0.0.1.war ubuntu@172.31.10.15:/var/lib/tomcat9/webapps"
+               sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/target/spring-boot-mockito-0.0.1.war ubuntu@172.31.10.15:/var/lib/tomcat9/webapps"
                }
             }
         }
