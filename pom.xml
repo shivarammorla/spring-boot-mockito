@@ -14,7 +14,7 @@
 	<distributionManagement>
 	<repository>
 	      <id>deploymentRepo</id>
-	      <url>http://3.95.2.218:8081/repository/hcltraining/</url>
+	      <url>http://54.161.20.206:8081/repository/hcltraining/</url>
 	</repository>
         </distributionManagement>
     
