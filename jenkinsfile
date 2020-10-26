@@ -1,0 +1,21 @@
+pipeline
+{
+agent any
+stages
+{
+stage('Checkout SCM')
+{
+steps
+{
+git credentialsId: 'github-creds', url: 'https://github.com/shivarammorla/spring-boot-mockito.git'
+}
+}
+stage('build code from maven')
+{
+steps
+{
+ sh 'mvn install'
+}
+}
+}
+}
