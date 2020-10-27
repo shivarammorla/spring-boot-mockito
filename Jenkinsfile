@@ -17,6 +17,12 @@ steps
  sh 'mvn install'
 }
 }
+ stage('SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('sonarqube') {
+                    sh 'mvn sonar:sonar'
+                }
+            }
 stage('push artifacts to nexus')
 {
 steps{
