@@ -23,6 +23,7 @@ steps
                     sh 'mvn sonar:sonar'
                 }
             }
+ }
 stage('push artifacts to nexus')
 {
 steps{
