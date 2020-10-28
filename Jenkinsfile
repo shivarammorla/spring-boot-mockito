@@ -27,7 +27,7 @@ steps
 }
 }
  
-stage('push artifacts to nexus')
+/*stage('push artifacts to nexus')
 {
 steps{
   //nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier: '', file: 'target/spring-boot-mockito-0.0.1', type: 'war']], credentialsId: 'nexus', groupId: 'com.example', nexusUrl: '13.232.247.9', nexusVersion: 'nexus3', protocol: 'http', repository: 'hcltraining', version: '0.0.1'
@@ -35,7 +35,7 @@ steps{
 nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier: '', file: 'target/spring-boot-mockito-0.0.1.war', type: 'war']], credentialsId: 'new-nexus', groupId: 'com.example', nexusUrl: '52.66.246.168:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'hcltraining', version: '0.0.1'    
  //test
 }
-}
+} */
  /*stage('deploy war to tomcat from nexus') {
  
            steps {
