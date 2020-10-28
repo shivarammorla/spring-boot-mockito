@@ -64,7 +64,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
         }
             stage('Run docker container') {
             steps {
-                sh 'docker run -d --name my-app4 -p 8084:8080 52.66.246.168:8083/my-app:4.0.0'
+                sh 'docker run -d --name my-app4 -p 8082:8082 52.66.246.168:8083/my-app:4.0.0'
             }
         
         }
