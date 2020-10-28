@@ -48,7 +48,28 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
               }
            }
         } */
-      stage('Build Docker Image') {
+            stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t 54.227.54.33:8083/my-app:4.0.0 .'
+            }
+        }
+        stage('Docker push to nexus') {
+            steps {
+                
+                withCredentials([string(credentialsId: 'nexusrepopw', variable: 'nexusrepopw')]) {
+                   sh 'docker login -u admin -p ${nexusrepopw} 54.227.54.33:8083'
+                }
+                
+                sh 'docker push 54.227.54.33:8083/my-app:4.0.0'
+            }
+        }
+        stage('Run docker container') {
+            steps {
+                sh 'docker run -d --name my-app4 -p 8084:8080 54.227.54.33:8083/my-app:4.0.0'
+            }
+        
+        }
+    /*  stage('Build Docker Image') {
             steps {
                 sh 'docker build -t 52.66.246.168:8083/my-app:3.0.0 .'
             }
@@ -61,7 +82,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 
                 sh 'docker push 52.66.246.168:8083/my-app:3.0.0'
             }
-        }
+        }*/
            /* stage('Docker push to nexus') {
             steps {
                 
