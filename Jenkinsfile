@@ -62,7 +62,8 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 
                 sh 'docker push 52.66.246.168:8083/my-app:2.0.0'
             }
-        }      
+        }  
+}
             
 }
 }
