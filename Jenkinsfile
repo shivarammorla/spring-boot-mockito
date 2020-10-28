@@ -36,7 +36,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
  //test
 }
 }
- stage('deploy war to tomcat from nexus') {
+ /*stage('deploy war to tomcat from nexus') {
  
            steps {
                 
@@ -47,7 +47,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/target/spring-boot-mockito-0.0.1.war ubuntu@13.235.67.190:/var/lib/tomcat9/webapps"
               }
            }
-        } 
+        } */
       stage('Build Docker Image') {
             steps {
                 sh 'docker build -t 52.66.246.168:8083/my-app:3.0.0 .'
