@@ -53,7 +53,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 sh 'docker build -t 52.66.246.168:8083/my-app:3.0.0 .'
             }
         }
-          /* stage('Docker push to nexus') {
+           stage('Docker push to nexus') {
             steps {
                 
                  
@@ -61,8 +61,8 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 
                 sh 'docker push 52.66.246.168:8083/my-app:3.0.0'
             }
-        }*/
-            stage('Docker push to nexus') {
+        }
+           /* stage('Docker push to nexus') {
             steps {
                 
                 withCredentials([string(credentialsId: 'new-nexus', variable: 'new-nexus')]) {
@@ -71,7 +71,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 
                 sh 'docker push 52.66.246.168:8083/my-app:3.0.0'
             }
-        }
+        }*/
            
 }
 }
