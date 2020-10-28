@@ -36,18 +36,18 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
  //test
 }
 }
- //stage('deploy war to tomcat from nexus') {
+ stage('deploy war to tomcat from nexus') {
  
-           // steps {
+           steps {
                 
-             //  sh "wget http://52.66.246.168:8081/repository/hcltraining/com/example/spring-boot-mockito/0.0.1/spring-boot-mockito-0.0.1.war"
-             // sshagent(['Tomcat-credentials']) {
-                 //test
-             // sh "ssh -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/spring-boot-mockito-0.0.1.war ubuntu@13.233.158.240:/var/lib/tomcat9/webapps" 
-              // sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/target/spring-boot-mockito-0.0.1.war ubuntu@13.235.67.190:/var/lib/tomcat9/webapps"
-            //  }
-          //  }
-      //  } 
+               sh "wget http://52.66.246.168:8081/repository/hcltraining/com/example/spring-boot-mockito/0.0.1/spring-boot-mockito-0.0.1.war"
+              sshagent(['Tomcat-credentials']) {
+                
+              //sh "ssh -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/spring-boot-mockito-0.0.1.war ubuntu@13.233.158.240:/var/lib/tomcat9/webapps" 
+               sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/target/spring-boot-mockito-0.0.1.war ubuntu@13.235.67.190:/var/lib/tomcat9/webapps"
+              }
+           }
+        } 
       stage('Build Docker Image') {
             steps {
                 sh 'docker build -t 52.66.246.168:8083/my-app:2.0.0 .'
