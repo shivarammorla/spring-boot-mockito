@@ -50,7 +50,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
         } 
       stage('Build Docker Image') {
             steps {
-                sh 'docker build -t 65.0.106.171:8083/my-app:2.0.0 .'
+                sh 'docker build -t 52.66.246.168:8083/my-app:2.0.0 .'
             }
         }
             stage('Docker push to nexus') {
