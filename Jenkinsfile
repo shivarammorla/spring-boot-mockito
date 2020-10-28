@@ -53,6 +53,17 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 sh 'docker build -t 52.66.246.168:8083/my-app:2.0.0 .'
             }
         }
+       stage('Docker push to nexus') {
+            steps {
+                
+                {
+	    withCredentials([string(credentialsId: 'nexusrepopw', variable: 'nexusrepopw')])
+                   sh 'docker login -u admin -p admin123 52.66.246.168:8083'
+                }
+                
+                sh 'docker push 52.66.246.168:8083/my-app:2.0.0'
+            }
+        }     
       
             
 }
