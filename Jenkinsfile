@@ -42,7 +42,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 
                sh "wget http://52.66.246.168:8081/repository/hcltraining/com/example/spring-boot-mockito/0.0.1/spring-boot-mockito-0.0.1.war"
               sshagent(['Tomcat-credentials']) {
-                 
+                 //test
              // sh "ssh -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/spring-boot-mockito-0.0.1.war ubuntu@13.233.158.240:/var/lib/tomcat9/webapps" 
                sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/proj3-pipeline/target/spring-boot-mockito-0.0.1.war ubuntu@13.235.67.190:/var/lib/tomcat9/webapps"
               }
