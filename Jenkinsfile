@@ -51,7 +51,7 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
             
      stage('Build Docker Image') {
             steps {
-                sh 'docker build -t 13.127.94.99:8083/my-app:4.0.0 .'
+                sh 'docker build -t 13.127.94.99:8083/my-app:1.0.0 .'
             }
         }
            stage('Docker push to nexus') {
@@ -59,12 +59,12 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-mockito', classifier
                 
                 sh 'docker login -u admin -p admin123 13.127.94.99:8083'
                 
-                sh 'docker push 13.127.94.99:8083/my-app:4.0.0'
+                sh 'docker push 13.127.94.99:8083/my-app:1.0.0'
             }
         }
             stage('Run docker container') {
             steps {
-                sh 'docker run -d --name my-app4 -p 8082:8082 13.127.94.99:8083/my-app:4.0.0'
+                sh 'docker run -d --name my-app1 -p 8082:8082 13.127.94.99:8083/my-app:1.0.0'
             }
         
         }
